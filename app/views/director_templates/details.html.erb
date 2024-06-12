@@ -45,3 +45,23 @@
   </dd>
 
 </dl>
+
+<%= matching_movies = Movie.where({:director_id => @the_director.id}) %>
+
+
+<table>
+  <tr>
+    <td>ID</td>
+    <td>Image</td>
+    <td>Title</td>
+    <td>Year</td>
+    <td>Director</td>
+
+  
+  </tr>
+</table>
+<% matching_movies.each do |a_movie| %>
+<li>
+  <%= a_movie %>
+</li>
+<% end %>
